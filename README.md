@@ -14,4 +14,4 @@
 -    Host the project on heroku
 
 This is the link to the project I hosted and pushed to heroku
-https://mfdbs-news.herokuapp.com/
+https://shazzar.herokuapp.com/
