@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+{% if user.is_authenticated %}
+    <br/>
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to My Django Blog</h1>
+        <p class="lead">Powered by Django</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}"
+                role="button">View All Articles</a>
+        </p>
+    </div>
+{% else %}
+    <br/>
+    <div class="jumbotron">
+        <h1 class="display-4">You are not logged in</h1>
+        <p class="lead">
+            <a class="btn btn-warning" href="{% url 'login' %}"
+                role="button">Kindly Login Here</a>
+        </p>
+    </div>
+{% endif %}
+{% endblock content %}
